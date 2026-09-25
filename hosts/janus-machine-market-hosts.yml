@@ -1,0 +1,50 @@
+generated: '2026-09-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 0
+  other_domain: 0
+  platform: 3
+  roles:
+  - api
+  - support
+  - website
+hosts:
+- host: api.github.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: github.com
+  role: api
+  relation: platform
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubRepository
+  - Support
+  - License
+  - SecurityPolicy
+  serves: []
+  registrable_domain: github.com
+  role: support
+  relation: platform
+- host: hawkar-usls.github.io
+  found_by:
+  - pointer
+  - apis[]
+  types:
+  - Website
+  - Documentation
+  - GettingStarted
+  - APIsJSON
+  - Pricing
+  serves:
+  - docs
+  registrable_domain: github.io
+  role: website
+  relation: platform

@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for janus-machine-market-pr-review-github-ingress-openapi.yml
+  version: 1.0.0
+extends: openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
+actions:
+- target: $.info
+  update:
+    x-provider: JANUS Machine Market
+    x-transport-note: Served over the GitHub Issues REST API (api.github.com) on repository Hawkar-usls/JANUS-MACHINE-MARKET, as defined by the
+      provider in AGENTS.md and MACHINE_INGRESS.json. The service is JANUS Machine Market; the HTTP surface is GitHub.
+    x-lifecycle-stage: public beta
+- target: $.paths.*.post[?(@.operationId=='createJanusFirstFreePRReview')]
+  update:
+    x-rate-limit-text: '"global_daily_limit": 10 and "max_changed_files": 300 (MACHINE_INGRESS.json)'
+    x-price-text: 'First order per external GitHub principal: price 0'
+    x-idempotency: none documented

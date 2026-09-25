@@ -1,0 +1,26 @@
+generated: '2026-09-25'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
+- openapi/janus-machine-market-search-github-ingress-openapi.yml
+format: custom
+envelope:
+  media_type: null
+  schema: null
+coverage:
+  operations: 4
+  statuses_declared: 2
+problems:
+- status: 401
+  title: Unauthorized
+  description: Caller GitHub credential missing or invalid.
+  operations: 2
+  media_types: []
+  schema: null
+- status: 422
+  title: Unprocessable Content
+  description: GitHub issue validation failed.
+  operations: 2
+  media_types: []
+  schema: null

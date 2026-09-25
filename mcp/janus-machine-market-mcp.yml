@@ -1,0 +1,12 @@
+generated: '2026-09-25'
+method: searched
+source: https://raw.githubusercontent.com/Hawkar-usls/JANUS-MACHINE-MARKET/main/discovery/MCP_PUBLICATION.json
+status: not-live
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+note: The provider's own MCP_PUBLICATION.json declares "status":"PREPARED_NOT_PUBLISHED_NO_LIVE_MCP_SERVER" and
+  "current_publication_allowed":false (target spec revision 2026-07-28). AGENTS.md lists "MCP runtime" under
+  "Not public-live yet". No endpoint or install command exists to record.
+tools: []

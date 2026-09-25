@@ -1,0 +1,14 @@
+generated: '2026-09-25'
+method: derived
+source: openapi/janus-machine-market-pr-review-github-ingress-openapi.yml, openapi/janus-machine-market-search-github-ingress-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: githubBearer
+  type: http
+  scheme: bearer
+  description: Caller-supplied GitHub credential used only to create/read the Market issue.
+  sources:
+  - openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
+  - openapi/janus-machine-market-search-github-ingress-openapi.yml

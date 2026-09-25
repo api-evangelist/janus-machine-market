@@ -1,0 +1,22 @@
+generated: '2026-09-25'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
+- openapi/janus-machine-market-search-github-ingress-openapi.yml
+vocabulary:
+  name: JANUS Machine Market Domain Vocabulary
+  description: 'Terms declared by JANUS Machine Market''s own API contract: its resource groups, objects and enumerations, with the contract''s
+    definitions. Derived, not authored.'
+  version: '2026-09-25'
+  terms:
+  - term: JANUS.PR_REVIEW
+    definition: Exact-SHA-bound structural/policy-risk review of public GitHub pull requests.
+    tags:
+    - Resource Group
+    source: openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
+  - term: JANUS.SEARCH
+    definition: Bounded research/search with provenance and receipt lineage.
+    tags:
+    - Resource Group
+    source: openapi/janus-machine-market-search-github-ingress-openapi.yml

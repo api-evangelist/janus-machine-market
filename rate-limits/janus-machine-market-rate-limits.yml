@@ -1,0 +1,33 @@
+name: JANUS Machine Market Rate Limits
+generated: '2026-09-25'
+method: searched
+source: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/MACHINE_INGRESS.json
+note: Limits are the provider's own public-beta caps from MACHINE_INGRESS.json (live_services.*.external_public_beta).
+  No rate-limit response headers are documented; calls travel over api.github.com, whose own GitHub REST
+  rate limits also apply but are GitHub's, not this provider's.
+limit_count: 4
+limits:
+- name: JANUS.SEARCH global daily limit
+  limit_text: '"global_daily_limit": 20'
+  max: 20
+  limit: 20
+  window: 1 day
+  scope: global
+  endpoint: createJanusFirstFreeSearchOrder
+- name: JANUS.SEARCH query size
+  limit_text: '"max_message_utf8_bytes": 4000'
+  max: 4000
+  scope: per-request
+  endpoint: createJanusFirstFreeSearchOrder
+- name: JANUS.PR_REVIEW global daily limit
+  limit_text: '"global_daily_limit": 10'
+  max: 10
+  limit: 10
+  window: 1 day
+  scope: global
+  endpoint: createJanusFirstFreePRReview
+- name: JANUS.PR_REVIEW changed files
+  limit_text: '"max_changed_files": 300'
+  max: 300
+  scope: per-request
+  endpoint: createJanusFirstFreePRReview

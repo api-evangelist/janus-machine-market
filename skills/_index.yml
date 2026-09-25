@@ -1,0 +1,19 @@
+generated: '2026-09-25'
+method: searched
+source: Provider-published Agent Skills from the JANUS-MACHINE-MARKET repository (skills/ and .well-known/agent-skills/);
+  verbatim copies in skills/_original/. Frontmatter api/operations added by API Evangelist, bodies unchanged.
+skills:
+- file: janus-machine-market-janus-search.md
+  name: janus-search
+  api: openapi/janus-machine-market-search-github-ingress-openapi.yml
+  operations:
+  - createJanusFirstFreeSearchOrder
+  - getJanusSearchResultComments
+  source: https://raw.githubusercontent.com/Hawkar-usls/JANUS-MACHINE-MARKET/main/skills/janus-search/SKILL.md
+- file: janus-machine-market-janus-pr-review.md
+  name: janus-pr-review
+  api: openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
+  operations:
+  - createJanusFirstFreePRReview
+  - getJanusPRReviewResultComments
+  source: https://raw.githubusercontent.com/Hawkar-usls/JANUS-MACHINE-MARKET/main/skills/janus-pr-review/SKILL.md

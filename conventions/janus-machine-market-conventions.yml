@@ -1,0 +1,31 @@
+generated: '2026-09-25'
+method: searched
+source: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/AGENTS.md
+transport: GitHub Issues REST API on repository Hawkar-usls/JANUS-MACHINE-MARKET (api.github.com). An order is
+  an issue with a fixed title and an HTML-comment JSON marker in the body; results arrive as issue comments.
+auth:
+  style: Caller-supplied GitHub credential (bearer) with Issues write access; the provider states credentials
+    must never be placed in issue bodies, repository files, Pages JavaScript or prompts.
+  see: authentication/janus-machine-market-authentication.yml
+request_envelope:
+  search: 'Title "[JANUS R1B BUYER QUERY SHADOW] Public beta request"; body marker JANUS_BUYER_QUERY_SHADOW_JSON
+    carrying {"schema":"janus.machine_market.buyer_query_shadow_request.v1","message_text":...}'
+  pr_review: 'Title "[JANUS PR REVIEW] First-free public request"; body marker JANUS_PR_REVIEW_PUBLIC_JSON carrying
+    {"schema":"janus.pr_review.public_request.v1","repository":...,"pull_number":...,"expected_head_sha":...}'
+async_pattern: Order is placed synchronously as an issue; the terminal result is a JANUS response comment read
+  by polling GET /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues/{issue_number}/comments.
+idempotency:
+  coverage: none
+  note: No idempotency key or replay mechanism is documented. "One issue binds one bounded query", and the
+    free order is limited to one per external GitHub principal, which is an entitlement rule, not replay protection.
+reversibility:
+  coverage: none
+  note: No cancel, withdraw or refund path is documented for a placed order. Both live paths are free, so no
+    money moves; an issue the caller opened can be closed through GitHub, but the docs do not say closing it
+    stops processing.
+dry_run_mode: none
+rate_limit_signaling:
+  see: rate-limits/janus-machine-market-rate-limits.yml
+  headers: none documented
+versioning: Request bodies carry a schema identifier (janus.machine_market.buyer_query_shadow_request.v1,
+  janus.pr_review.public_request.v1); both OpenAPI documents are info.version 1.0.0.

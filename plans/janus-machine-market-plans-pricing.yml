@@ -1,0 +1,33 @@
+name: JANUS Machine Market Plans
+generated: '2026-09-25'
+method: searched
+source: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/llms.txt
+audience: developer-api
+pricing_basis: free
+published: false
+currency: USDT
+delivery:
+  delivery: managed
+note: 'The only live pricing is a first free order per external GitHub principal for JANUS.SEARCH and for
+  JANUS.PR_REVIEW. The provider also publishes a USDT ratecard at https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/PRICING.json,
+  but that file marks itself PREVIEW_RATECARD_NOT_LIVE and the docs say paid SEARCH is not public-live, so no paid
+  tier is recorded as purchasable here.'
+plans:
+- name: JANUS.SEARCH first free order
+  description: One bounded research order per external GitHub principal, placed as a GitHub issue.
+  price: 0
+  price_text: 'First order per external GitHub principal: price 0'
+  features:
+  - Bounded research result with provenance and receipt lineage returned as an issue comment
+  limits:
+  - 1 order per external GitHub principal
+  - 'max_message_utf8_bytes: 4000'
+- name: JANUS.PR_REVIEW first free review
+  description: One structural/policy-risk review of a public GitHub pull request per external GitHub principal.
+  price: 0
+  price_text: 'First review per external GitHub principal: price 0'
+  features:
+  - Review frozen at the exact 40-hex PR head SHA; target code is never executed
+  limits:
+  - 1 review per external GitHub principal
+  - 'Maximum changed files: 300'
