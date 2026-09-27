@@ -85,72 +85,24 @@ common:
 - type: LLMsTxt
   url: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/llms.txt
 apis:
-- aid: janus-machine-market:janus-search-github-ingress
-  name: JANUS.SEARCH GitHub Issues Ingress
-  description: 'Places one bounded JANUS.SEARCH research order by opening a GitHub issue with a fixed title and
-    a JANUS_BUYER_QUERY_SHADOW_JSON body marker (query up to 4000 UTF-8 bytes), then reads the reconciled result,
-    with provenance and receipt lineage, from the issue comments. First order per external GitHub principal is free.
-    Transport note: the host is api.github.com because the provider''s own AGENTS.md and MACHINE_INGRESS.json define
-    the ingress as GitHub Issues on its repository Hawkar-usls/JANUS-MACHINE-MARKET; every path is scoped to that
-    repository. The API surface is GitHub''s; the service behind it is JANUS Machine Market''s.'
+- aid: janus-machine-market:janus-machine-market-repos-api
+  name: JANUS Machine Market Repos API
+  description: The Repos API from JANUS Machine Market — 2 operation(s) for repos.
   humanURL: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/AGENTS.md
   baseURL: https://api.github.com/repos/Hawkar-usls/JANUS-MACHINE-MARKET
   tags:
-  - GitHub Issues
-  - AI Agents
-  - S
-  - e
-  - a
-  - r
-  - c
-  - h
+  - Repos
   properties:
   - type: OpenAPI
-    url: openapi/janus-machine-market-search-github-ingress-openapi.yml
-  - type: OpenAPI
-    name: OpenAPI (provider-hosted)
-    url: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/discovery/GITHUB_ISSUES_INGRESS.openapi.json
+    url: openapi/janus-machine-market-repos-api-openapi.yml
   - type: Documentation
     url: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/AGENTS.md
   - type: GettingStarted
-    url: https://github.com/Hawkar-usls/JANUS-MACHINE-MARKET/issues/new?template=janus-search-free-beta.md
-- aid: janus-machine-market:janus-pr-review-github-ingress
-  name: JANUS.PR_REVIEW GitHub Issues Ingress
-  description: 'Requests one structural/policy-risk review of a public GitHub pull request, frozen at its exact
-    40-hex head SHA (maximum 300 changed files; target code is never executed), by opening a GitHub issue with a
-    JANUS_PR_REVIEW_PUBLIC_JSON body marker, and reads the result and receipt from the issue comments. First review
-    per external GitHub principal is free; at most 10 accepted public reviews per UTC day. Transport note: the host
-    is api.github.com because the provider''s own AGENTS.md and MACHINE_INGRESS.json define the ingress as GitHub
-    Issues on its repository Hawkar-usls/JANUS-MACHINE-MARKET; every path is scoped to that repository. The API
-    surface is GitHub''s; the service behind it is JANUS Machine Market''s.'
-  humanURL: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/AGENTS.md
-  baseURL: https://api.github.com/repos/Hawkar-usls/JANUS-MACHINE-MARKET
-  tags:
-  - GitHub Issues
-  - AI Agents
-  - P
-  - u
-  - l
-  - l
-  - ' '
-  - R
-  - e
-  - q
-  - u
-  - e
-  - s
-  - t
-  - s
-  properties:
-  - type: OpenAPI
-    url: openapi/janus-machine-market-pr-review-github-ingress-openapi.yml
-  - type: OpenAPI
-    name: OpenAPI (provider-hosted)
-    url: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/discovery/PR_REVIEW_GITHUB_INGRESS.openapi.json
-  - type: Documentation
-    url: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/AGENTS.md
+    url: >-
+      https://github.com/Hawkar-usls/JANUS-MACHINE-MARKET/issues/new?template=janus-search-free-beta.md
   - type: GettingStarted
-    url: https://github.com/Hawkar-usls/JANUS-MACHINE-MARKET/issues/new?template=janus-pr-review-free-beta.md
+    url: >-
+      https://github.com/Hawkar-usls/JANUS-MACHINE-MARKET/issues/new?template=janus-pr-review-free-beta.md
 x-enrichment:
   date: '2026-09-25'
   status: enriched

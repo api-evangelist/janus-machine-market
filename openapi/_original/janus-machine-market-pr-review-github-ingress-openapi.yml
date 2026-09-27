@@ -1,3 +1,5 @@
+# x-archived-from: janus-machine-market-pr-review-github-ingress-openapi.yml
+# x-archived-on: 2026-09-26
 openapi: 3.1.0
 info:
   title: JANUS.PR_REVIEW — Public GitHub Pull Request Review Ingress
