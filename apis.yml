@@ -108,3 +108,11 @@ x-enrichment:
   status: enriched
   artifacts_added: 22
   pass: local-v5
+x-correction-request:
+  requested: '2026-09-27'
+  source: email from Hawkar (hawkarlol@gmail.com) 2026-09-27
+  request: 'Paid JANUS.SEARCH is now LIVE as a bounded GitHub Issues exact-invoice checkout, settled in
+    USDT on Ethereum Mainnet and BTT on TRON Mainnet. Still NOT live: the general transaction API, MCP
+    runtime, A2A runtime and x402 seller runtime. The published apis.json was updated (commit 56e9846415deedee62f583ebf3f9f5493fd6d44b
+    in Hawkar-usls/JANUS-MACHINE-MARKET). Re-profile from the current apis.json; keep the GitHub-Issues-ingress
+    attribution (x-attribution-note).'
