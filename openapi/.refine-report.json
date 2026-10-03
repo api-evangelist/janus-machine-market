@@ -1,38 +1,27 @@
 {
   "provider": "janus-machine-market",
   "sources": [
-    "_original/janus-machine-market-pr-review-github-ingress-openapi.json",
-    "janus-machine-market-pr-review-github-ingress-openapi.yml",
-    "janus-machine-market-search-github-ingress-openapi.yml"
+    "_original/janus-machine-market-pr-review-github-ingress-openapi.json"
   ],
   "outputs": [
     "janus-machine-market-repos-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/janus-machine-market-pr-review-github-ingress-openapi.yml",
-    "archived openapi/janus-machine-market-search-github-ingress-openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "1 archived document(s) dropped as subsets of other archived documents",
+    "3 archived document(s) dropped as subsets of other archived documents",
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "janus-machine-market-pr-review-github-ingress-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "janus-machine-market-pr-review-github-ingress-openapi.json: tagged paths POST /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues -> Repos",
     "janus-machine-market-pr-review-github-ingress-openapi.json: tagged paths GET /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues/{issue_number}/comments -> Repos",
     "janus-machine-market-pr-review-github-ingress-openapi.json: declared missing tag: Repos",
-    "janus-machine-market-pr-review-github-ingress-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "janus-machine-market-pr-review-github-ingress-openapi.yml: tagged paths POST /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues -> Repos",
-    "janus-machine-market-pr-review-github-ingress-openapi.yml: tagged paths GET /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues/{issue_number}/comments -> Repos",
-    "janus-machine-market-pr-review-github-ingress-openapi.yml: declared missing tag: Repos",
-    "janus-machine-market-search-github-ingress-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "janus-machine-market-search-github-ingress-openapi.yml: tagged paths POST /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues -> Repos",
-    "janus-machine-market-search-github-ingress-openapi.yml: tagged paths GET /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues/{issue_number}/comments -> Repos",
-    "janus-machine-market-search-github-ingress-openapi.yml: declared missing tag: Repos",
-    "tag 'Repos' spans 3 source specs (janus-machine-market-pr-review-github-ingress-openapi.json, janus-machine-market-pr-review-github-ingress-openapi.yml, janus-machine-market-search-github-ingress-openapi.yml): per-path servers applied",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "_original/janus-machine-market-search-github-ingress-openapi.json: archived document superseded by a larger archived document"
+    "_original/janus-machine-market-search-github-ingress-openapi.yml: archived document superseded by a larger archived document",
+    "_original/janus-machine-market-search-github-ingress-openapi.json: archived document superseded by a larger archived document",
+    "_original/janus-machine-market-pr-review-github-ingress-openapi.yml: archived document superseded by a larger archived document",
+    "janus-machine-market-repos-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }

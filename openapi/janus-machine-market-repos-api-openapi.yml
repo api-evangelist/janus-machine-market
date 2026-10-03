@@ -1,8 +1,8 @@
 openapi: 3.2.0
 info:
-  title: Janus Machine Market Repos API
+  title: JANUS.PR_REVIEW — Public GitHub Pull Request Review Ingress…
   version: 1.0.0
-  description: 'Operations tagged Repos across 3 of this provider''s published API definitions: janus-machine-market-pr-review-github-ingress-openapi.json, janus-machine-market-pr-review-github-ingress-openapi.yml, janus-machine-market-search-github-ingress-openapi.yml. Each path carries the servers of the definition it was published in.'
+  description: First-free bounded structural/policy-risk review of a public GitHub pull request. The request freezes the exact PR head SHA. Target repository code is never executed.
 servers:
 - url: https://api.github.com
 tags:
@@ -43,8 +43,6 @@ paths:
           description: GitHub issue validation failed.
       tags:
       - Repos
-    servers:
-    - url: https://api.github.com
   /repos/Hawkar-usls/JANUS-MACHINE-MARKET/issues/{issue_number}/comments:
     get:
       operationId: getJanusPRReviewResultComments
@@ -63,15 +61,9 @@ paths:
           description: Issue comments containing admission/result and durable receipt lineage.
       tags:
       - Repos
-    servers:
-    - url: https://api.github.com
 components:
   securitySchemes:
     githubBearer:
       type: http
       scheme: bearer
       description: Caller-supplied GitHub credential used only to create/read the Market issue.
-x-refined-from:
-- janus-machine-market-pr-review-github-ingress-openapi.json
-- janus-machine-market-pr-review-github-ingress-openapi.yml
-- janus-machine-market-search-github-ingress-openapi.yml
