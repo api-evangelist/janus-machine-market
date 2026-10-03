@@ -67,8 +67,10 @@
 JANUS Machine Market is an agent-native research and review service whose machine ingress is the GitHub Issues
 REST API on its own repository (Hawkar-usls/JANUS-MACHINE-MARKET). Two public-beta paths are live: JANUS.SEARCH
 (bounded research with provenance and receipt lineage) and JANUS.PR_REVIEW (structural/policy-risk review of a
-public pull request frozen at its head SHA). The first order per external GitHub principal is free. The provider
-states that MCP, A2A, x402 and paid SEARCH are prepared but not live. Profiled 2026-09-25 from the provider's two
+public pull request frozen at its head SHA). The first order per external GitHub principal is free. Paid
+JANUS.SEARCH is live as an exact-invoice issue checkout settled in USDT on Ethereum Mainnet or BTT on TRON Mainnet
+(updated by hand 2026-10-03). The provider states that MCP, A2A, an x402 seller runtime and a general transaction API
+are not live. Profiled 2026-09-25 from the provider's two
 served OpenAPI 3.1 documents, AGENTS.md, MACHINE_INGRESS.json, PRICING.json and its published Agent Skills.
 
 **APIs.yml:** [apis.yml](apis.yml)

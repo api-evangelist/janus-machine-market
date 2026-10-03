@@ -1,17 +1,20 @@
 name: JANUS Machine Market Plans
-generated: '2026-09-25'
+generated: '2026-10-03'
 method: searched
 source: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/llms.txt
 audience: developer-api
-pricing_basis: free
-published: false
+pricing_basis: per-call
+published: true
 currency: USDT
 delivery:
   delivery: managed
-note: 'The only live pricing is a first free order per external GitHub principal for JANUS.SEARCH and for
-  JANUS.PR_REVIEW. The provider also publishes a USDT ratecard at https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/PRICING.json,
-  but that file marks itself PREVIEW_RATECARD_NOT_LIVE and the docs say paid SEARCH is not public-live, so no paid
-  tier is recorded as purchasable here.'
+note: 'A first free order per external GitHub principal for JANUS.SEARCH and for JANUS.PR_REVIEW, and paid JANUS.SEARCH
+  live since 2026-09-27 as an exact-invoice GitHub Issues checkout. The ratecard at https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/PRICING.json
+  (version 2026-09-27-search-dual-rail-live-1, live_skus JANUS.SEARCH) prices SEARCH per request in USDT micros on Ethereum
+  Mainnet, with mode multipliers (FAST, STANDARD, DEEP), queue levels and quantity discounts; the BTT (TRC-20, TRON Mainnet)
+  route is priced at 50% of the USDT reference total (BTT_PAYMENT_ROUTE.json). Browser/catalog totals are informational until
+  an exact invoice is issued on the order issue. Every other SKU in the ratecard is preview-only. AGENTS.md and llms.txt as
+  served 2026-10-03 still list paid SEARCH as not public-live; the apis.json, PRICING.json and issue templates say live.'
 plans:
 - name: JANUS.SEARCH first free order
   description: One bounded research order per external GitHub principal, placed as a GitHub issue.
@@ -31,3 +34,21 @@ plans:
   limits:
   - 1 review per external GitHub principal
   - 'Maximum changed files: 300'
+- name: JANUS.SEARCH paid (USDT on Ethereum Mainnet)
+  description: Exact-invoice paid research order placed as a GitHub issue (janus-paid-search template); price frozen in the invoice.
+  source: https://hawkar-usls.github.io/JANUS-MACHINE-MARKET/PRICING.json
+  price_text: '"base_unit_usdt_micros": 50000'
+  billing_period: per request
+  features:
+  - 'Modes: FAST (multiplier_bps 10000), STANDARD (16000), DEEP (30000)'
+  - 'Queue levels: STANDARD, PRIORITY, EXPRESS, PRIME, GATE'
+  - 'Quantity discounts: 5% at 5, 10% at 10, 15% at 25'
+  limits:
+  - 'quote_ttl_seconds: 900'
+- name: JANUS.SEARCH paid (BTT on TRON Mainnet)
+  description: Exact-invoice paid research order via the janus-paid-search-btt template, settled in BTT (TRC-20) on TRON Mainnet.
+  source: https://raw.githubusercontent.com/Hawkar-usls/JANUS-MACHINE-MARKET/main/BTT_PAYMENT_ROUTE.json
+  price_text: 'BTT route reference value is exactly 50% of the otherwise-applicable USDT-denominated invoice after catalog mode, quantity and queue adjustments.'
+  billing_period: per request
+  features:
+  - BTT amount computed from a frozen Binance BTTCUSDT observation bound to the invoice; requires exact solidified TRC-20 settlement

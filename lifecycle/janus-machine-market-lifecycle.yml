@@ -7,5 +7,6 @@ versioning:
 deprecation: null
 status_page: null
 note: Both live paths are labelled public beta. No versioning policy, deprecation policy, changelog or status
-  page is published; the provider lists MCP, A2A, x402, paid SEARCH and a general transaction API as not yet
+  page is published. Paid JANUS.SEARCH went live 2026-09-27 (exact-invoice USDT/Ethereum and BTT/TRON checkout per
+  apis.json and PRICING.json); the provider lists MCP, A2A, an x402 seller runtime and a general transaction API as not yet
   live. No operation in either OpenAPI is marked deprecated.
