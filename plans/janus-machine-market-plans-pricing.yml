@@ -52,3 +52,34 @@ plans:
   billing_period: per request
   features:
   - BTT amount computed from a frozen Binance BTTCUSDT observation bound to the invoice; requires exact solidified TRC-20 settlement
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: JANUS.SEARCH first free order
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: JANUS.PR_REVIEW first free review
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: JANUS.SEARCH paid (USDT on Ethereum Mainnet)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: JANUS.SEARCH paid (BTT on TRON Mainnet)
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
